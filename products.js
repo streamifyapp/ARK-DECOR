@@ -97,7 +97,6 @@ const PRODUCTS = [
     badge: "New Arrival",
     isNew: true
   },
-
   // ---- WALL LIGHTS (3) ----
   {
     id: 5,
@@ -168,7 +167,6 @@ const PRODUCTS = [
     badge: "Premium",
     isNew: false
   },
-
   // ---- WALL HANGINGS (3) ----
   {
     id: 8,
@@ -239,7 +237,6 @@ const PRODUCTS = [
     badge: "New Arrival",
     isNew: true
   },
-
   // ---- CEILING LIGHTS (3) ----
   {
     id: 11,
@@ -310,7 +307,6 @@ const PRODUCTS = [
     badge: "Premium",
     isNew: false
   },
-
   // ---- TABLE LAMPS (3) ----
   {
     id: 14,
@@ -381,7 +377,6 @@ const PRODUCTS = [
     badge: "Custom",
     isNew: true
   },
-
   // ---- OUTDOOR LIGHTS (2) ----
   {
     id: 17,
