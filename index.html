@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   <meta name="description" content="ARK Decor — Mumbai's premier luxury lighting atelier. Handcrafted chandeliers, jhumars, wall lights, and bespoke lighting for distinguished spaces." />
   <meta name="keywords" content="luxury lighting Mumbai, chandelier, jhumar, wall lights, ARK Decor, handcrafted lighting India" />
   <meta name="author" content="ARK Decor" />
@@ -18,7 +18,6 @@
   <link rel="canonical" href="https://arkdecor.in" />
   <title>ARK Decor — Luxury Lighting Atelier, Mumbai</title>
 
-  <!-- Favicon -->
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🕯️</text></svg>" />
 
   <!-- Google Fonts -->
@@ -40,24 +39,32 @@
 </head>
 <body>
 
-  <!-- Custom Cursor -->
+  <!-- Custom Cursor (desktop only) -->
   <div class="cursor-dot" id="cursorDot"></div>
   <div class="cursor-ring" id="cursorRing"></div>
 
   <!-- Scroll Progress Bar -->
   <div class="scroll-progress" id="scrollProgress"></div>
 
-  <!-- ============ PRELOADER ============ -->
+  <!-- ============ PREMIUM PRELOADER ============ -->
   <div class="preloader" id="preloader">
+    <canvas id="preloaderCanvas"></canvas>
     <div class="preloader-inner">
-      <div class="preloader-logo">
-        <span class="preloader-ark">ARK</span>
-        <span class="preloader-bar">|</span>
-        <span class="preloader-decor">DECOR</span>
+      <div class="preloader-logo-wrap">
+        <div class="preloader-logo">
+          <span class="preloader-ark">ARK</span>
+          <span class="preloader-bar">|</span>
+          <span class="preloader-decor">DECOR</span>
+        </div>
+        <div class="preloader-shimmer"></div>
       </div>
       <div class="preloader-tagline">Crafting Light. Defining Space.</div>
-      <div class="preloader-line"></div>
+      <div class="preloader-progress-wrap">
+        <div class="preloader-progress-bar" id="preloaderBar"></div>
+      </div>
+      <div class="preloader-percent" id="preloaderPercent">0%</div>
     </div>
+    <div class="preloader-particles" id="preloaderParticles"></div>
   </div>
 
   <!-- ============ NAVBAR ============ -->
@@ -126,6 +133,9 @@
 
   <!-- ============ HERO SECTION ============ -->
   <section class="hero" id="home">
+    <!-- Particle canvas -->
+    <canvas id="particleCanvas" class="particle-canvas"></canvas>
+
     <div class="hero-bg">
       <div class="hero-orb orb-1"></div>
       <div class="hero-orb orb-2"></div>
@@ -210,7 +220,6 @@
         <p class="section-subtitle">Timeless lighting crafted for distinguished spaces</p>
       </div>
 
-      <!-- Shop Controls -->
       <div class="shop-controls" data-aos="fade-up" data-aos-delay="100">
         <div class="shop-search-wrap">
           <i class="fas fa-search shop-search-icon"></i>
@@ -224,7 +233,6 @@
         </select>
       </div>
 
-      <!-- Category Filters -->
       <div class="category-filters" data-aos="fade-up" data-aos-delay="150">
         <button class="filter-btn active" data-category="all">All</button>
         <button class="filter-btn" data-category="jhumars">Jhumars</button>
@@ -235,12 +243,7 @@
         <button class="filter-btn" data-category="outdoor-lights">Outdoor Lights</button>
       </div>
 
-      <!-- Products Grid -->
-      <div class="products-grid" id="productsGrid">
-        <!-- Populated by JS -->
-      </div>
-
-      <!-- No Results -->
+      <div class="products-grid" id="productsGrid"></div>
       <div class="no-results" id="noResults" style="display:none;">
         <i class="fas fa-search"></i>
         <p>No products found. Try a different search or category.</p>
@@ -305,7 +308,6 @@
         </div>
       </div>
 
-      <!-- Stats -->
       <div class="stats-row" data-aos="fade-up" data-aos-delay="200">
         <div class="stat-item">
           <span class="stat-number" data-target="12">0</span>
@@ -346,7 +348,6 @@
 
       <div class="swiper testimonials-swiper" data-aos="fade-up" data-aos-delay="150">
         <div class="swiper-wrapper">
-
           <div class="swiper-slide">
             <div class="testimonial-card">
               <div class="testimonial-stars">
@@ -362,7 +363,6 @@
               </div>
             </div>
           </div>
-
           <div class="swiper-slide">
             <div class="testimonial-card">
               <div class="testimonial-stars">
@@ -378,7 +378,6 @@
               </div>
             </div>
           </div>
-
           <div class="swiper-slide">
             <div class="testimonial-card">
               <div class="testimonial-stars">
@@ -394,7 +393,6 @@
               </div>
             </div>
           </div>
-
           <div class="swiper-slide">
             <div class="testimonial-card">
               <div class="testimonial-stars">
@@ -410,7 +408,6 @@
               </div>
             </div>
           </div>
-
           <div class="swiper-slide">
             <div class="testimonial-card">
               <div class="testimonial-stars">
@@ -426,7 +423,6 @@
               </div>
             </div>
           </div>
-
         </div>
         <div class="swiper-button-prev testimonial-prev"><i class="fas fa-chevron-left"></i></div>
         <div class="swiper-button-next testimonial-next"><i class="fas fa-chevron-right"></i></div>
@@ -446,74 +442,45 @@
       </div>
 
       <div class="gallery-masonry" id="galleryGrid">
-
         <div class="gallery-item" data-aos="fade-up" data-aos-delay="0">
           <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80" alt="Luxury chandelier installation" loading="lazy" />
-          <div class="gallery-overlay">
-            <span class="gallery-view"><i class="fas fa-expand-alt"></i> View</span>
-          </div>
+          <div class="gallery-overlay"><span class="gallery-view"><i class="fas fa-expand-alt"></i> View</span></div>
         </div>
-
         <div class="gallery-item" data-aos="fade-up" data-aos-delay="50">
           <img src="https://images.unsplash.com/photo-1567016432779-094069958ea5?w=800&q=80" alt="Modern living room with pendant lights" loading="lazy" />
-          <div class="gallery-overlay">
-            <span class="gallery-view"><i class="fas fa-expand-alt"></i> View</span>
-          </div>
+          <div class="gallery-overlay"><span class="gallery-view"><i class="fas fa-expand-alt"></i> View</span></div>
         </div>
-
         <div class="gallery-item" data-aos="fade-up" data-aos-delay="100">
           <img src="https://images.unsplash.com/photo-1540932239986-30128078f3c5?w=800&q=80" alt="Elegant dining room chandelier" loading="lazy" />
-          <div class="gallery-overlay">
-            <span class="gallery-view"><i class="fas fa-expand-alt"></i> View</span>
-          </div>
+          <div class="gallery-overlay"><span class="gallery-view"><i class="fas fa-expand-alt"></i> View</span></div>
         </div>
-
         <div class="gallery-item" data-aos="fade-up" data-aos-delay="150">
           <img src="https://images.unsplash.com/photo-1507473885765-e6ed057f782c?w=800&q=80" alt="Hotel lobby lighting installation" loading="lazy" />
-          <div class="gallery-overlay">
-            <span class="gallery-view"><i class="fas fa-expand-alt"></i> View</span>
-          </div>
+          <div class="gallery-overlay"><span class="gallery-view"><i class="fas fa-expand-alt"></i> View</span></div>
         </div>
-
         <div class="gallery-item" data-aos="fade-up" data-aos-delay="200">
           <img src="https://images.unsplash.com/photo-1449247709967-d4461a6a6103?w=800&q=80" alt="Artisan wall sconce installation" loading="lazy" />
-          <div class="gallery-overlay">
-            <span class="gallery-view"><i class="fas fa-expand-alt"></i> View</span>
-          </div>
+          <div class="gallery-overlay"><span class="gallery-view"><i class="fas fa-expand-alt"></i> View</span></div>
         </div>
-
         <div class="gallery-item" data-aos="fade-up" data-aos-delay="250">
           <img src="https://images.unsplash.com/photo-1615529328331-f8917597711f?w=800&q=80" alt="Bedroom accent lighting" loading="lazy" />
-          <div class="gallery-overlay">
-            <span class="gallery-view"><i class="fas fa-expand-alt"></i> View</span>
-          </div>
+          <div class="gallery-overlay"><span class="gallery-view"><i class="fas fa-expand-alt"></i> View</span></div>
         </div>
-
         <div class="gallery-item" data-aos="fade-up" data-aos-delay="300">
           <img src="https://images.unsplash.com/photo-1513506003901-1e6a35e7d47f?w=800&q=80" alt="Table lamp luxury interior" loading="lazy" />
-          <div class="gallery-overlay">
-            <span class="gallery-view"><i class="fas fa-expand-alt"></i> View</span>
-          </div>
+          <div class="gallery-overlay"><span class="gallery-view"><i class="fas fa-expand-alt"></i> View</span></div>
         </div>
-
         <div class="gallery-item" data-aos="fade-up" data-aos-delay="350">
           <img src="https://images.unsplash.com/photo-1571508601891-ca5e7a713859?w=800&q=80" alt="Outdoor lantern installation" loading="lazy" />
-          <div class="gallery-overlay">
-            <span class="gallery-view"><i class="fas fa-expand-alt"></i> View</span>
-          </div>
+          <div class="gallery-overlay"><span class="gallery-view"><i class="fas fa-expand-alt"></i> View</span></div>
         </div>
-
         <div class="gallery-item" data-aos="fade-up" data-aos-delay="400">
           <img src="https://images.unsplash.com/photo-1582582621959-48d27397dc69?w=800&q=80" alt="Crystal ceiling light" loading="lazy" />
-          <div class="gallery-overlay">
-            <span class="gallery-view"><i class="fas fa-expand-alt"></i> View</span>
-          </div>
+          <div class="gallery-overlay"><span class="gallery-view"><i class="fas fa-expand-alt"></i> View</span></div>
         </div>
-
       </div>
     </div>
 
-    <!-- Gallery Lightbox -->
     <div class="lightbox-overlay" id="lightboxOverlay">
       <button class="lightbox-close" id="lightboxClose"><i class="fas fa-times"></i></button>
       <button class="lightbox-prev" id="lightboxPrev"><i class="fas fa-chevron-left"></i></button>
@@ -556,13 +523,11 @@
               <a href="mailto:hello@arkdecor.in" class="contact-value contact-link">hello@arkdecor.in</a>
             </div>
           </div>
-
           <a href="https://wa.me/918452099537" target="_blank" class="contact-wa-btn">
             <div class="wa-pulse-ring"></div>
             <i class="fab fa-whatsapp"></i>
             <span>Chat on WhatsApp</span>
           </a>
-
           <div class="contact-social">
             <a href="#" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
             <a href="#" class="social-icon" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
@@ -600,7 +565,6 @@
     <div class="footer-main">
       <div class="container">
         <div class="footer-grid">
-
           <div class="footer-col footer-brand">
             <div class="footer-logo">
               <span class="logo-ark">ARK</span>
@@ -615,7 +579,6 @@
               <a href="https://wa.me/918452099537" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
             </div>
           </div>
-
           <div class="footer-col">
             <h5 class="footer-col-title">Quick Links</h5>
             <ul class="footer-links">
@@ -627,7 +590,6 @@
               <li><a href="#contact">Contact</a></li>
             </ul>
           </div>
-
           <div class="footer-col">
             <h5 class="footer-col-title">Categories</h5>
             <ul class="footer-links">
@@ -639,7 +601,6 @@
               <li><a href="#shop" data-filter="outdoor-lights">Outdoor Lights</a></li>
             </ul>
           </div>
-
           <div class="footer-col">
             <h5 class="footer-col-title">Contact</h5>
             <ul class="footer-contact-list">
@@ -649,11 +610,9 @@
               <li><a href="https://wa.me/918452099537" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp Us</a></li>
             </ul>
           </div>
-
         </div>
       </div>
     </div>
-
     <div class="footer-bottom">
       <div class="container">
         <div class="footer-bottom-inner">
