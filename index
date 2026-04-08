@@ -1,0 +1,759 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="ARK Decor — Premium luxury lighting & home decor shop. Shop Jhumars, Chandeliers, Wall Lights, Ceiling Lights, Table Lamps and more. Order via WhatsApp." />
+  <meta name="keywords" content="luxury lighting, jhumar, chandelier, wall lights, ceiling lights, table lamps, home decor, Pakistan, ARK Decor" />
+  <meta name="author" content="ARK Decor" />
+  <meta name="theme-color" content="#0a0a0a" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="ARK Decor — Illuminate Your World" />
+  <meta property="og:description" content="Premium luxury lighting & home decor. Jhumars, Wall Lights, Chandeliers and more." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://arkdecor.github.io" />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="ARK Decor — Illuminate Your World" />
+  <meta name="twitter:description" content="Premium luxury lighting & home decor shop." />
+
+  <title>ARK Decor — Illuminate Your World</title>
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🕯️</text></svg>" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- AOS Animation -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+
+  <!-- Swiper.js -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <!-- Main Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- ========== PRELOADER ========== -->
+  <div id="preloader">
+    <div class="preloader-inner">
+      <div class="preloader-logo">
+        <span class="preloader-ark">ARK</span>
+        <span class="preloader-decor">DECOR</span>
+      </div>
+      <div class="preloader-tagline">Illuminate Your World</div>
+      <div class="preloader-bar"><div class="preloader-progress"></div></div>
+    </div>
+    <div class="preloader-particles" id="preloaderParticles"></div>
+  </div>
+
+  <!-- ========== SCROLL PROGRESS BAR ========== -->
+  <div id="scrollProgress"></div>
+
+  <!-- ========== CUSTOM CURSOR ========== -->
+  <div id="customCursor"></div>
+  <div id="customCursorTrail"></div>
+
+  <!-- ========== NAVBAR ========== -->
+  <nav id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo">
+        <span class="logo-ark">ARK</span>
+        <span class="logo-decor">Decor</span>
+        <span class="logo-icon"><i class="fas fa-crown"></i></span>
+      </a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="nav-link active">Home</a></li>
+        <li><a href="#shop" class="nav-link">Shop</a></li>
+        <li><a href="#about" class="nav-link">About</a></li>
+        <li><a href="#gallery" class="nav-link">Gallery</a></li>
+        <li><a href="#contact" class="nav-link">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="nav-wishlist-btn" id="wishlistNavBtn" title="Wishlist">
+          <i class="fas fa-heart"></i>
+          <span class="wishlist-count" id="wishlistCount">0</span>
+        </button>
+        <button class="nav-hamburger" id="hamburger" aria-label="Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- ========== HERO SECTION ========== -->
+  <section id="home" class="hero">
+    <div class="hero-bg"></div>
+    <canvas id="particleCanvas"></canvas>
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content" data-aos="fade-up" data-aos-duration="1200">
+      <div class="hero-badge">
+        <i class="fas fa-star"></i> Premium Luxury Lighting
+      </div>
+      <h1 class="hero-title">
+        Illuminate<br />
+        <span class="hero-title-gold">Your World</span>
+      </h1>
+      <p class="hero-subtitle">
+        Discover our exquisite collection of handcrafted Jhumars, Chandeliers,<br class="desktop-only" />
+        Wall Lights & Home Décor — where artistry meets elegance.
+      </p>
+      <div class="hero-buttons">
+        <a href="#shop" class="btn btn-gold">
+          <i class="fas fa-gem"></i> Explore Collection
+        </a>
+        <a href="#" class="btn btn-whatsapp" id="heroWhatsappBtn">
+          <i class="fab fa-whatsapp"></i> Contact on WhatsApp
+        </a>
+      </div>
+      <div class="hero-stats">
+        <div class="hero-stat">
+          <span class="hero-stat-num">500+</span>
+          <span class="hero-stat-label">Products</span>
+        </div>
+        <div class="hero-stat-divider"></div>
+        <div class="hero-stat">
+          <span class="hero-stat-num">2K+</span>
+          <span class="hero-stat-label">Customers</span>
+        </div>
+        <div class="hero-stat-divider"></div>
+        <div class="hero-stat">
+          <span class="hero-stat-num">5★</span>
+          <span class="hero-stat-label">Rated</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="hero-scroll-hint">
+      <div class="scroll-mouse">
+        <div class="scroll-wheel"></div>
+      </div>
+      <span>Scroll to Explore</span>
+    </div>
+  </section>
+
+  <!-- ========== FEATURES BAR ========== -->
+  <section class="features-bar">
+    <div class="container">
+      <div class="features-grid">
+        <div class="feature-item" data-aos="fade-up" data-aos-delay="0">
+          <div class="feature-icon"><i class="fas fa-gem"></i></div>
+          <div class="feature-text">
+            <h4>Premium Quality</h4>
+            <p>Handcrafted luxury pieces</p>
+          </div>
+        </div>
+        <div class="feature-item" data-aos="fade-up" data-aos-delay="100">
+          <div class="feature-icon"><i class="fas fa-comments"></i></div>
+          <div class="feature-text">
+            <h4>Free Consultation</h4>
+            <p>Expert design advice</p>
+          </div>
+        </div>
+        <div class="feature-item" data-aos="fade-up" data-aos-delay="200">
+          <div class="feature-icon"><i class="fas fa-paint-brush"></i></div>
+          <div class="feature-text">
+            <h4>Custom Orders</h4>
+            <p>Tailored to your vision</p>
+          </div>
+        </div>
+        <div class="feature-item" data-aos="fade-up" data-aos-delay="300">
+          <div class="feature-icon"><i class="fab fa-whatsapp"></i></div>
+          <div class="feature-text">
+            <h4>WhatsApp Support</h4>
+            <p>24/7 instant assistance</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== SHOP SECTION ========== -->
+  <section id="shop" class="shop-section">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-label">Our Collection</span>
+        <h2 class="section-title">Luxury <span class="gold-text">Lighting</span> Shop</h2>
+        <p class="section-subtitle">Each piece is a masterwork of light and shadow, designed to transform your space.</p>
+      </div>
+
+      <!-- Search & Sort Bar -->
+      <div class="shop-controls" data-aos="fade-up" data-aos-delay="100">
+        <div class="search-bar">
+          <i class="fas fa-search"></i>
+          <input type="text" id="searchInput" placeholder="Search products..." />
+          <button id="clearSearch" class="clear-search" style="display:none"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="sort-bar">
+          <select id="sortSelect">
+            <option value="default">Sort By</option>
+            <option value="price-low">Price: Low to High</option>
+            <option value="price-high">Price: High to Low</option>
+            <option value="rating">Top Rated</option>
+            <option value="newest">Newest First</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Category Filters -->
+      <div class="category-filters" data-aos="fade-up" data-aos-delay="150">
+        <button class="filter-btn active" data-filter="all">
+          <i class="fas fa-th"></i> All
+        </button>
+        <button class="filter-btn" data-filter="jhumars">
+          <i class="fas fa-sun"></i> Jhumars
+        </button>
+        <button class="filter-btn" data-filter="wall-lights">
+          <i class="fas fa-lightbulb"></i> Wall Lights
+        </button>
+        <button class="filter-btn" data-filter="wall-hangings">
+          <i class="fas fa-image"></i> Wall Hangings
+        </button>
+        <button class="filter-btn" data-filter="ceiling-lights">
+          <i class="fas fa-circle"></i> Ceiling Lights
+        </button>
+        <button class="filter-btn" data-filter="table-lamps">
+          <i class="fas fa-desktop"></i> Table Lamps
+        </button>
+        <button class="filter-btn" data-filter="outdoor-lights">
+          <i class="fas fa-tree"></i> Outdoor Lights
+        </button>
+      </div>
+
+      <!-- Products Grid -->
+      <div class="products-grid" id="productsGrid">
+        <!-- Products injected by JS -->
+      </div>
+
+      <!-- No Results -->
+      <div class="no-results" id="noResults" style="display:none">
+        <i class="fas fa-search"></i>
+        <h3>No Products Found</h3>
+        <p>Try a different search term or category.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== QUICK VIEW MODAL ========== -->
+  <div class="modal-overlay" id="quickViewModal">
+    <div class="modal-container">
+      <button class="modal-close" id="modalClose"><i class="fas fa-times"></i></button>
+      <div class="modal-body" id="modalBody">
+        <!-- Injected by JS -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ========== ABOUT SECTION ========== -->
+  <section id="about" class="about-section">
+    <div class="container">
+      <div class="about-grid">
+        <div class="about-image-col" data-aos="fade-right" data-aos-duration="1000">
+          <div class="about-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1600121848594-d8644e57abab?w=800&q=90" alt="ARK Decor Showroom" loading="lazy" />
+            <div class="about-img-badge">
+              <i class="fas fa-crown"></i>
+              <span>Since 2018</span>
+            </div>
+          </div>
+          <div class="about-img-secondary">
+            <img src="https://images.unsplash.com/photo-1519710164239-da123dc03ef4?w=400&q=80" alt="Luxury Chandelier" loading="lazy" />
+          </div>
+        </div>
+
+        <div class="about-content-col" data-aos="fade-left" data-aos-duration="1000">
+          <span class="section-label">Our Story</span>
+          <h2 class="section-title">Crafting <span class="gold-text">Brilliance</span><br />Since 2018</h2>
+          <p class="about-text">
+            ARK Decor was born from a passion for transforming ordinary spaces into extraordinary experiences. 
+            We believe that lighting is not merely functional — it is the soul of a room, the heartbeat of ambiance.
+          </p>
+          <p class="about-text">
+            Our master artisans hand-select every crystal, every gilded frame, every carefully bent wire 
+            to ensure that each piece that leaves our workshop is a testament to uncompromising luxury. 
+            From intimate bedrooms to grand ballrooms, our Jhumars and lighting solutions have graced 
+            Pakistan's most prestigious homes and venues.
+          </p>
+          <div class="about-features">
+            <div class="about-feature">
+              <i class="fas fa-check-circle"></i>
+              <span>100% Handcrafted Pieces</span>
+            </div>
+            <div class="about-feature">
+              <i class="fas fa-check-circle"></i>
+              <span>Premium Grade Materials</span>
+            </div>
+            <div class="about-feature">
+              <i class="fas fa-check-circle"></i>
+              <span>Bespoke Custom Orders</span>
+            </div>
+            <div class="about-feature">
+              <i class="fas fa-check-circle"></i>
+              <span>Nationwide Delivery</span>
+            </div>
+          </div>
+          <a href="#contact" class="btn btn-gold">
+            <i class="fas fa-envelope"></i> Get In Touch
+          </a>
+        </div>
+      </div>
+
+      <!-- Stats -->
+      <div class="about-stats" data-aos="fade-up" data-aos-delay="200">
+        <div class="stat-card">
+          <div class="stat-num" data-count="6">0</div>
+          <div class="stat-plus">+</div>
+          <div class="stat-label">Years of Excellence</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num" data-count="500">0</div>
+          <div class="stat-plus">+</div>
+          <div class="stat-label">Products Crafted</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num" data-count="2000">0</div>
+          <div class="stat-plus">+</div>
+          <div class="stat-label">Happy Customers</div>
+        </div>
+        <div class="stat-card">
+          <div class="stat-num" data-count="150">0</div>
+          <div class="stat-plus">+</div>
+          <div class="stat-label">Custom Orders</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== TESTIMONIALS ========== -->
+  <section class="testimonials-section">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-label">Client Love</span>
+        <h2 class="section-title">What Our <span class="gold-text">Clients</span> Say</h2>
+        <p class="section-subtitle">Real stories from our valued customers across Pakistan.</p>
+      </div>
+
+      <div class="swiper testimonials-swiper" data-aos="fade-up" data-aos-delay="100">
+        <div class="swiper-wrapper">
+
+          <div class="swiper-slide">
+            <div class="testimonial-card">
+              <div class="testimonial-quote"><i class="fas fa-quote-left"></i></div>
+              <p class="testimonial-text">
+                "The Royal Crystal Jhumar we ordered for our drawing room is absolutely breathtaking. 
+                Every guest who visits is mesmerized. ARK Decor truly delivered beyond our expectations. 
+                The quality is unmatched and the service was impeccable."
+              </p>
+              <div class="testimonial-stars">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                <i class="fas fa-star"></i><i class="fas fa-star"></i>
+              </div>
+              <div class="testimonial-author">
+                <div class="testimonial-avatar">SA</div>
+                <div class="testimonial-info">
+                  <h4>Sadia Ahsan</h4>
+                  <p>Lahore, Pakistan</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="testimonial-card">
+              <div class="testimonial-quote"><i class="fas fa-quote-left"></i></div>
+              <p class="testimonial-text">
+                "I ordered a custom ceiling light for my restaurant and the result was phenomenal. 
+                The team at ARK Decor was professional, responsive on WhatsApp, and delivered on time. 
+                My restaurant ambiance has been completely transformed. Highly recommended!"
+              </p>
+              <div class="testimonial-stars">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                <i class="fas fa-star"></i><i class="fas fa-star"></i>
+              </div>
+              <div class="testimonial-author">
+                <div class="testimonial-avatar">RK</div>
+                <div class="testimonial-info">
+                  <h4>Raheel Khan</h4>
+                  <p>Karachi, Pakistan</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="testimonial-card">
+              <div class="testimonial-quote"><i class="fas fa-quote-left"></i></div>
+              <p class="testimonial-text">
+                "We decorated our entire villa with ARK Decor products — from the entrance Jhumar 
+                to bedroom wall lights. The consistency in quality and the elegance of each piece 
+                creates a harmonious luxury throughout. Worth every rupee spent!"
+              </p>
+              <div class="testimonial-stars">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                <i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+              </div>
+              <div class="testimonial-author">
+                <div class="testimonial-avatar">FM</div>
+                <div class="testimonial-info">
+                  <h4>Fatima Malik</h4>
+                  <p>Islamabad, Pakistan</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="testimonial-card">
+              <div class="testimonial-quote"><i class="fas fa-quote-left"></i></div>
+              <p class="testimonial-text">
+                "The wall hangings and sconces I purchased for my boutique hotel have received 
+                countless compliments from international guests. ARK Decor's pieces have a 
+                timeless quality that elevates any space to world-class standards."
+              </p>
+              <div class="testimonial-stars">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                <i class="fas fa-star"></i><i class="fas fa-star"></i>
+              </div>
+              <div class="testimonial-author">
+                <div class="testimonial-avatar">ZB</div>
+                <div class="testimonial-info">
+                  <h4>Zain Butt</h4>
+                  <p>Lahore, Pakistan</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="swiper-slide">
+            <div class="testimonial-card">
+              <div class="testimonial-quote"><i class="fas fa-quote-left"></i></div>
+              <p class="testimonial-text">
+                "Ordering was incredibly easy through WhatsApp. The team helped me choose the 
+                perfect table lamp for my home office. The packaging was excellent and the 
+                product arrived in pristine condition. I'll definitely be ordering again!"
+              </p>
+              <div class="testimonial-stars">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                <i class="fas fa-star"></i><i class="fas fa-star"></i>
+              </div>
+              <div class="testimonial-author">
+                <div class="testimonial-avatar">NA</div>
+                <div class="testimonial-info">
+                  <h4>Nadia Aslam</h4>
+                  <p>Faisalabad, Pakistan</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="swiper-pagination testimonial-pagination"></div>
+        <div class="swiper-button-prev testimonial-prev"></div>
+        <div class="swiper-button-next testimonial-next"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== GALLERY SECTION ========== -->
+  <section id="gallery" class="gallery-section">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-label">Portfolio</span>
+        <h2 class="section-title">Our <span class="gold-text">Installations</span></h2>
+        <p class="section-subtitle">A glimpse into the world of spaces we've transformed with light.</p>
+      </div>
+
+      <div class="gallery-grid" id="galleryGrid">
+        <div class="gallery-item gallery-large" data-aos="fade-up" data-aos-delay="0">
+          <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=85" alt="Grand Jhumar Installation" loading="lazy" />
+          <div class="gallery-overlay">
+            <i class="fas fa-expand"></i>
+            <span>Grand Ballroom Jhumar</span>
+          </div>
+        </div>
+        <div class="gallery-item" data-aos="fade-up" data-aos-delay="100">
+          <img src="https://images.unsplash.com/photo-1540932239986-30128078f3c5?w=600&q=85" alt="Crystal Chandelier" loading="lazy" />
+          <div class="gallery-overlay">
+            <i class="fas fa-expand"></i>
+            <span>Crystal Chandelier Suite</span>
+          </div>
+        </div>
+        <div class="gallery-item" data-aos="fade-up" data-aos-delay="150">
+          <img src="https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?w=600&q=85" alt="Wall Light Setup" loading="lazy" />
+          <div class="gallery-overlay">
+            <i class="fas fa-expand"></i>
+            <span>Luxury Wall Lighting</span>
+          </div>
+        </div>
+        <div class="gallery-item gallery-tall" data-aos="fade-up" data-aos-delay="200">
+          <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=600&q=85" alt="Interior Lighting" loading="lazy" />
+          <div class="gallery-overlay">
+            <i class="fas fa-expand"></i>
+            <span>Villa Interior Setup</span>
+          </div>
+        </div>
+        <div class="gallery-item" data-aos="fade-up" data-aos-delay="250">
+          <img src="https://images.unsplash.com/photo-1507473885765-e6ed057f782c?w=600&q=85" alt="Table Lamp" loading="lazy" />
+          <div class="gallery-overlay">
+            <i class="fas fa-expand"></i>
+            <span>Artisan Table Lamp</span>
+          </div>
+        </div>
+        <div class="gallery-item" data-aos="fade-up" data-aos-delay="300">
+          <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=600&q=85" alt="Living Room Setup" loading="lazy" />
+          <div class="gallery-overlay">
+            <i class="fas fa-expand"></i>
+            <span>Modern Living Room</span>
+          </div>
+        </div>
+        <div class="gallery-item gallery-wide" data-aos="fade-up" data-aos-delay="350">
+          <img src="https://images.unsplash.com/photo-1565182999561-18d7dc61c393?w=900&q=85" alt="Dining Chandelier" loading="lazy" />
+          <div class="gallery-overlay">
+            <i class="fas fa-expand"></i>
+            <span>Dining Room Elegance</span>
+          </div>
+        </div>
+        <div class="gallery-item" data-aos="fade-up" data-aos-delay="400">
+          <img src="https://images.unsplash.com/photo-1484101403633-562f891dc89a?w=600&q=85" alt="Bedroom Lighting" loading="lazy" />
+          <div class="gallery-overlay">
+            <i class="fas fa-expand"></i>
+            <span>Bedroom Ambiance</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Lightbox -->
+  <div class="lightbox-overlay" id="lightboxOverlay">
+    <button class="lightbox-close" id="lightboxClose"><i class="fas fa-times"></i></button>
+    <button class="lightbox-prev" id="lightboxPrev"><i class="fas fa-chevron-left"></i></button>
+    <button class="lightbox-next" id="lightboxNext"><i class="fas fa-chevron-right"></i></button>
+    <div class="lightbox-content">
+      <img id="lightboxImg" src="" alt="" />
+      <p id="lightboxCaption"></p>
+    </div>
+  </div>
+
+  <!-- ========== CONTACT SECTION ========== -->
+  <section id="contact" class="contact-section">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-label">Reach Us</span>
+        <h2 class="section-title">Get In <span class="gold-text">Touch</span></h2>
+        <p class="section-subtitle">We'd love to help you find the perfect lighting for your space.</p>
+      </div>
+
+      <div class="contact-grid">
+        <!-- Contact Info -->
+        <div class="contact-info-col" data-aos="fade-right" data-aos-duration="1000">
+          <div class="contact-info-card">
+            <h3>Contact Information</h3>
+            <div class="contact-item">
+              <div class="contact-icon"><i class="fab fa-whatsapp"></i></div>
+              <div class="contact-detail">
+                <span class="contact-label">WhatsApp</span>
+                <span class="contact-value" id="displayPhone">+92 3XX-XXXXXXX</span>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+              <div class="contact-detail">
+                <span class="contact-label">Email</span>
+                <span class="contact-value">info@arkdecor.pk</span>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+              <div class="contact-detail">
+                <span class="contact-label">Location</span>
+                <span class="contact-value">Lahore, Punjab, Pakistan</span>
+              </div>
+            </div>
+            <div class="contact-item">
+              <div class="contact-icon"><i class="fas fa-clock"></i></div>
+              <div class="contact-detail">
+                <span class="contact-label">Hours</span>
+                <span class="contact-value">Mon–Sat: 10AM – 8PM</span>
+              </div>
+            </div>
+
+            <div class="contact-social">
+              <h4>Follow Us</h4>
+              <div class="social-links">
+                <a href="#" class="social-link" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="social-link" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="social-link" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+                <a href="#" class="social-link" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+              </div>
+            </div>
+
+            <!-- Big WhatsApp Button -->
+            <a href="#" class="btn-whatsapp-big" id="contactWhatsappBtn">
+              <i class="fab fa-whatsapp"></i>
+              <div>
+                <span>Chat on WhatsApp</span>
+                <small>Quick response guaranteed</small>
+              </div>
+            </a>
+          </div>
+        </div>
+
+        <!-- Contact Form -->
+        <div class="contact-form-col" data-aos="fade-left" data-aos-duration="1000">
+          <div class="contact-form-card">
+            <h3>Send a Message</h3>
+            <p>Fill out the form and we'll respond via WhatsApp instantly.</p>
+            <form id="contactForm">
+              <div class="form-group">
+                <label for="contactName">Your Name</label>
+                <input type="text" id="contactName" placeholder="e.g. Ahmed Khan" required />
+              </div>
+              <div class="form-group">
+                <label for="contactPhone">Phone Number</label>
+                <input type="tel" id="contactPhone" placeholder="e.g. 0300-1234567" />
+              </div>
+              <div class="form-group">
+                <label for="contactSubject">Subject</label>
+                <select id="contactSubject">
+                  <option value="General Inquiry">General Inquiry</option>
+                  <option value="Product Information">Product Information</option>
+                  <option value="Custom Order">Custom Order</option>
+                  <option value="Pricing">Pricing</option>
+                  <option value="Delivery">Delivery</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="contactMessage">Message</label>
+                <textarea id="contactMessage" rows="4" placeholder="Tell us about your requirements..." required></textarea>
+              </div>
+              <button type="submit" class="btn btn-gold form-submit-btn">
+                <i class="fab fa-whatsapp"></i> Send via WhatsApp
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="footer">
+    <div class="footer-top">
+      <div class="container">
+        <div class="footer-grid">
+          <!-- Brand -->
+          <div class="footer-brand">
+            <a href="#home" class="footer-logo">
+              <span class="logo-ark">ARK</span>
+              <span class="logo-decor">Decor</span>
+            </a>
+            <p class="footer-brand-text">
+              Illuminating Pakistan's most exquisite homes and spaces with handcrafted luxury lighting since 2018.
+            </p>
+            <div class="footer-social">
+              <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+              <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+              <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+            </div>
+          </div>
+
+          <!-- Quick Links -->
+          <div class="footer-col">
+            <h4>Quick Links</h4>
+            <ul>
+              <li><a href="#home"><i class="fas fa-chevron-right"></i> Home</a></li>
+              <li><a href="#shop"><i class="fas fa-chevron-right"></i> Shop</a></li>
+              <li><a href="#about"><i class="fas fa-chevron-right"></i> About Us</a></li>
+              <li><a href="#gallery"><i class="fas fa-chevron-right"></i> Gallery</a></li>
+              <li><a href="#contact"><i class="fas fa-chevron-right"></i> Contact</a></li>
+            </ul>
+          </div>
+
+          <!-- Categories -->
+          <div class="footer-col">
+            <h4>Categories</h4>
+            <ul>
+              <li><a href="#shop"><i class="fas fa-chevron-right"></i> Jhumars</a></li>
+              <li><a href="#shop"><i class="fas fa-chevron-right"></i> Wall Lights</a></li>
+              <li><a href="#shop"><i class="fas fa-chevron-right"></i> Wall Hangings</a></li>
+              <li><a href="#shop"><i class="fas fa-chevron-right"></i> Ceiling Lights</a></li>
+              <li><a href="#shop"><i class="fas fa-chevron-right"></i> Table Lamps</a></li>
+              <li><a href="#shop"><i class="fas fa-chevron-right"></i> Outdoor Lights</a></li>
+            </ul>
+          </div>
+
+          <!-- Contact Info -->
+          <div class="footer-col">
+            <h4>Contact Us</h4>
+            <ul class="footer-contact-list">
+              <li><i class="fab fa-whatsapp"></i> <span id="footerPhone">+92 3XX-XXXXXXX</span></li>
+              <li><i class="fas fa-envelope"></i> info@arkdecor.pk</li>
+              <li><i class="fas fa-map-marker-alt"></i> Lahore, Pakistan</li>
+            </ul>
+            <a href="#" class="footer-whatsapp-btn" id="footerWhatsappBtn">
+              <i class="fab fa-whatsapp"></i> Order Now
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <p>&copy; <span id="footerYear"></span> ARK Decor. All rights reserved.</p>
+        <p>Made with <i class="fas fa-heart" style="color:#c9a84c"></i> for ARK Decor</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========== WISHLIST SIDEBAR ========== -->
+  <div class="wishlist-overlay" id="wishlistOverlay"></div>
+  <div class="wishlist-sidebar" id="wishlistSidebar">
+    <div class="wishlist-header">
+      <h3><i class="fas fa-heart"></i> My Wishlist</h3>
+      <button id="closeWishlist"><i class="fas fa-times"></i></button>
+    </div>
+    <div class="wishlist-items" id="wishlistItems">
+      <!-- Injected by JS -->
+    </div>
+    <div class="wishlist-empty" id="wishlistEmpty">
+      <i class="fas fa-heart-broken"></i>
+      <p>Your wishlist is empty</p>
+      <a href="#shop" class="btn btn-gold">Browse Products</a>
+    </div>
+  </div>
+
+  <!-- ========== FLOATING WHATSAPP BUTTON ========== -->
+  <a href="#" class="whatsapp-float" id="whatsappFloat" title="Chat on WhatsApp">
+    <i class="fab fa-whatsapp"></i>
+    <div class="whatsapp-float-ripple"></div>
+  </a>
+
+  <!-- ========== SCROLL TO TOP ========== -->
+  <button class="scroll-top-btn" id="scrollTopBtn" title="Back to Top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <!-- ========== TOAST NOTIFICATION ========== -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="products.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
