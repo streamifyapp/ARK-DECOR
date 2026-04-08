@@ -2,538 +2,697 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
-  <meta name="description" content="ARK Decor — Premium luxury lighting & home decor shop in Mira Road, Mumbai. Shop Jhumars, Chandeliers, Wall Lights, Ceiling Lights and more." />
-  <meta name="keywords" content="luxury lighting, chandelier, jhumar, wall lights, ceiling lights, table lamps, home decor, Mumbai, Mira Road, ARK Decor" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="ARK Decor — Mumbai's premier luxury lighting atelier. Handcrafted chandeliers, jhumars, wall lights, and bespoke lighting for distinguished spaces." />
+  <meta name="keywords" content="luxury lighting Mumbai, chandelier, jhumar, wall lights, ARK Decor, handcrafted lighting India" />
   <meta name="author" content="ARK Decor" />
-  <meta name="theme-color" content="#0a0a0a" />
-  <meta property="og:title" content="ARK Decor — Illuminate Your World" />
-  <meta property="og:description" content="Premium luxury lighting & home decor. Mumbai, Mira Road." />
+  <meta name="robots" content="index, follow" />
+  <meta property="og:title" content="ARK Decor — Luxury Lighting Atelier, Mumbai" />
+  <meta property="og:description" content="Handcrafted chandeliers and artisan lighting for homes that demand the extraordinary." />
   <meta property="og:type" content="website" />
-  <meta property="og:image" content="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200" />
+  <meta property="og:url" content="https://arkdecor.in" />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=1200&q=80" />
   <meta name="twitter:card" content="summary_large_image" />
-  <title>ARK Decor — Premium Lighting & Home Decor | Mira Road, Mumbai</title>
-  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>💡</text></svg>" />
+  <meta name="twitter:title" content="ARK Decor — Luxury Lighting Atelier" />
+  <meta name="twitter:description" content="Handcrafted chandeliers and artisan lighting for homes that demand the extraordinary." />
+  <link rel="canonical" href="https://arkdecor.in" />
+  <title>ARK Decor — Luxury Lighting Atelier, Mumbai</title>
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🕯️</text></svg>" />
+
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,600&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500;1,600&family=Poppins:wght@300;400;500;600&family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <!-- AOS -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" />
+
+  <!-- Swiper -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+
+  <!-- Main CSS -->
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- PRELOADER -->
-  <div id="preloader">
-    <div class="preloader-content">
+  <!-- Custom Cursor -->
+  <div class="cursor-dot" id="cursorDot"></div>
+  <div class="cursor-ring" id="cursorRing"></div>
+
+  <!-- Scroll Progress Bar -->
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <!-- ============ PRELOADER ============ -->
+  <div class="preloader" id="preloader">
+    <div class="preloader-inner">
       <div class="preloader-logo">
-        <span class="pre-ark">ARK</span>
-        <span class="pre-decor">DECOR</span>
+        <span class="preloader-ark">ARK</span>
+        <span class="preloader-bar">|</span>
+        <span class="preloader-decor">DECOR</span>
       </div>
-      <p class="pre-tag">Illuminate Your World</p>
-      <div class="pre-bar"><div class="pre-fill"></div></div>
+      <div class="preloader-tagline">Crafting Light. Defining Space.</div>
+      <div class="preloader-line"></div>
     </div>
   </div>
 
-  <!-- SCROLL PROGRESS -->
-  <div id="scrollBar"></div>
-
-  <!-- NAVBAR -->
-  <nav id="navbar">
-    <div class="nav-wrap">
-      <a href="#home" class="brand">
-        <div class="brand-icon"><i class="fas fa-crown"></i></div>
-        <div class="brand-text">
-          <span class="b-ark">ARK</span>
-          <span class="b-decor">Decor</span>
-        </div>
+  <!-- ============ NAVBAR ============ -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-container">
+      <a href="#home" class="nav-logo">
+        <span class="logo-ark">ARK</span>
+        <span class="logo-divider">|</span>
+        <span class="logo-decor">DECOR</span>
       </a>
-      <ul class="nav-menu" id="navMenu">
-        <li><a href="#home" class="nm-link active">Home</a></li>
-        <li><a href="#shop" class="nm-link">Shop</a></li>
-        <li><a href="#about" class="nm-link">About</a></li>
-        <li><a href="#gallery" class="nm-link">Gallery</a></li>
-        <li><a href="#contact" class="nm-link">Contact</a></li>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home" class="nav-link active" data-section="home">Home</a></li>
+        <li><a href="#shop" class="nav-link" data-section="shop">Shop</a></li>
+        <li><a href="#about" class="nav-link" data-section="about">About</a></li>
+        <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
       </ul>
-      <div class="nav-right">
-        <button class="wish-btn" id="wishBtn">
+
+      <div class="nav-actions">
+        <button class="nav-action-btn" id="searchToggle" aria-label="Search">
+          <i class="fas fa-search"></i>
+        </button>
+        <button class="nav-action-btn wishlist-btn" id="wishlistToggle" aria-label="Wishlist">
           <i class="fas fa-heart"></i>
-          <span class="wish-num" id="wishNum">0</span>
+          <span class="wishlist-badge" id="wishlistBadge">0</span>
         </button>
-        <button class="hamburger" id="hamburger">
-          <span></span><span></span><span></span>
+        <a href="https://wa.me/918452099537" target="_blank" class="nav-action-btn whatsapp-nav" aria-label="WhatsApp">
+          <i class="fab fa-whatsapp"></i>
+        </a>
+        <button class="hamburger" id="hamburger" aria-label="Menu">
+          <span></span>
+          <span></span>
+          <span></span>
         </button>
+      </div>
+    </div>
+
+    <!-- Search Bar -->
+    <div class="search-overlay" id="searchOverlay">
+      <div class="search-container">
+        <input type="text" id="navSearchInput" placeholder="Search lighting, chandeliers, lamps..." class="search-input" />
+        <button class="search-close" id="searchClose"><i class="fas fa-times"></i></button>
+      </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+      <ul class="mobile-nav-links">
+        <li><a href="#home" class="mobile-nav-link" data-close="true">Home</a></li>
+        <li><a href="#shop" class="mobile-nav-link" data-close="true">Shop</a></li>
+        <li><a href="#about" class="mobile-nav-link" data-close="true">About</a></li>
+        <li><a href="#contact" class="mobile-nav-link" data-close="true">Contact</a></li>
+      </ul>
+      <div class="mobile-menu-footer">
+        <a href="https://wa.me/918452099537" target="_blank" class="mobile-wa-btn">
+          <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+        </a>
+        <div class="mobile-social">
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+          <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest"></i></a>
+        </div>
       </div>
     </div>
   </nav>
 
-  <!-- HERO -->
-  <section id="home" class="hero">
-    <canvas id="heroCanvas"></canvas>
-    <div class="hero-overlay"></div>
-    <div class="hero-inner">
-      <div class="hero-badge" data-aos="fade-down" data-aos-duration="800">
-        <i class="fas fa-gem"></i>&nbsp; Premium Luxury Lighting
+  <!-- ============ HERO SECTION ============ -->
+  <section class="hero" id="home">
+    <div class="hero-bg">
+      <div class="hero-orb orb-1"></div>
+      <div class="hero-orb orb-2"></div>
+      <div class="hero-orb orb-3"></div>
+      <div class="hero-orb orb-4"></div>
+    </div>
+    <div class="grain-overlay"></div>
+
+    <div class="hero-content">
+      <div class="hero-eyebrow" data-aos="fade-down" data-aos-duration="800">
+        <span>✦ MUMBAI'S PREMIER LIGHTING ATELIER ✦</span>
       </div>
-      <h1 class="hero-h1" data-aos="fade-up" data-aos-duration="900" data-aos-delay="100">
-        Illuminate<br/><em class="gold-em">Your World</em>
+      <h1 class="hero-heading" data-aos="fade-up" data-aos-duration="900" data-aos-delay="100">
+        <em class="hero-illuminate">Illuminate</em>
+        <span class="hero-your-world">Your World</span>
       </h1>
-      <p class="hero-p" data-aos="fade-up" data-aos-duration="900" data-aos-delay="200">
-        Handcrafted chandeliers, wall lights &amp; home décor — <br class="d-br"/>
-        where artistry meets timeless elegance.
+      <p class="hero-subheading" data-aos="fade-up" data-aos-duration="900" data-aos-delay="200">
+        Handcrafted chandeliers and artisan lighting for homes<br class="hero-br" /> that demand the extraordinary.
       </p>
-      <div class="hero-btns" data-aos="fade-up" data-aos-duration="900" data-aos-delay="300">
-        <a href="#shop" class="btn-primary">
-          <i class="fas fa-th-large"></i> Explore Collection
+      <div class="hero-ctas" data-aos="fade-up" data-aos-duration="900" data-aos-delay="300">
+        <a href="#shop" class="btn btn-filled">
+          <span>Explore Collection</span>
+          <i class="fas fa-arrow-right"></i>
         </a>
-        <a href="#" class="btn-wa" id="heroWa">
-          <i class="fab fa-whatsapp"></i> WhatsApp Us
+        <a href="https://wa.me/918452099537" target="_blank" class="btn btn-outlined">
+          <i class="fab fa-whatsapp"></i>
+          <span>WhatsApp Us</span>
         </a>
-      </div>
-      <div class="hero-nums" data-aos="fade-up" data-aos-duration="900" data-aos-delay="400">
-        <div class="h-num"><strong>500+</strong><span>Products</span></div>
-        <div class="h-div"></div>
-        <div class="h-num"><strong>2K+</strong><span>Customers</span></div>
-        <div class="h-div"></div>
-        <div class="h-num"><strong>5 ★</strong><span>Rated</span></div>
       </div>
     </div>
-    <div class="hero-scroll">
-      <div class="scroll-dot"></div>
-      <span>Scroll</span>
+
+    <div class="hero-scroll-indicator">
+      <div class="scroll-line"></div>
+      <span class="scroll-text">Scroll</span>
     </div>
   </section>
 
-  <!-- FEATURES -->
-  <section class="features">
-    <div class="wrap">
-      <div class="feat-grid">
-        <div class="feat-item" data-aos="fade-up" data-aos-delay="0">
-          <div class="feat-ico"><i class="fas fa-gem"></i></div>
-          <h4>Premium Quality</h4>
-          <p>Handcrafted luxury pieces</p>
+  <!-- ============ FEATURES BAR ============ -->
+  <section class="features-bar">
+    <div class="features-container">
+      <div class="feature-item" data-aos="fade-up" data-aos-delay="0">
+        <div class="feature-icon"><i class="fas fa-gem"></i></div>
+        <div class="feature-text">
+          <h4>Handcrafted Excellence</h4>
+          <p>Each piece made by master artisans</p>
         </div>
-        <div class="feat-item" data-aos="fade-up" data-aos-delay="100">
-          <div class="feat-ico"><i class="fas fa-comments"></i></div>
-          <h4>Free Consultation</h4>
-          <p>Expert design advice</p>
+      </div>
+      <div class="feature-divider"></div>
+      <div class="feature-item" data-aos="fade-up" data-aos-delay="100">
+        <div class="feature-icon"><i class="fas fa-drafting-compass"></i></div>
+        <div class="feature-text">
+          <h4>Free Design Consultation</h4>
+          <p>Expert advice for your space</p>
         </div>
-        <div class="feat-item" data-aos="fade-up" data-aos-delay="200">
-          <div class="feat-ico"><i class="fas fa-paint-brush"></i></div>
-          <h4>Custom Orders</h4>
-          <p>Tailored to your vision</p>
+      </div>
+      <div class="feature-divider"></div>
+      <div class="feature-item" data-aos="fade-up" data-aos-delay="200">
+        <div class="feature-icon"><i class="fas fa-ruler-combined"></i></div>
+        <div class="feature-text">
+          <h4>Custom Bespoke Orders</h4>
+          <p>Made to your exact specifications</p>
         </div>
-        <div class="feat-item" data-aos="fade-up" data-aos-delay="300">
-          <div class="feat-ico"><i class="fab fa-whatsapp"></i></div>
-          <h4>WhatsApp Support</h4>
-          <p>Quick response always</p>
+      </div>
+      <div class="feature-divider"></div>
+      <div class="feature-item" data-aos="fade-up" data-aos-delay="300">
+        <div class="feature-icon"><i class="fas fa-truck"></i></div>
+        <div class="feature-text">
+          <h4>Pan-India Delivery</h4>
+          <p>Delivered safely across India</p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- SHOP -->
-  <section id="shop" class="shop">
-    <div class="wrap">
-      <div class="sec-head" data-aos="fade-up">
-        <span class="sec-tag">Our Collection</span>
-        <h2 class="sec-title">Luxury <em class="gold-em">Lighting</em> Shop</h2>
-        <p class="sec-sub">Each piece is a masterwork of light, designed to transform your space.</p>
+  <!-- ============ SHOP SECTION ============ -->
+  <section class="shop-section" id="shop">
+    <div class="section-divider"></div>
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-eyebrow">✦ CURATED COLLECTION ✦</span>
+        <h2 class="section-title">Our Collection</h2>
+        <p class="section-subtitle">Timeless lighting crafted for distinguished spaces</p>
       </div>
 
-      <!-- Search & Sort -->
-      <div class="shop-bar" data-aos="fade-up" data-aos-delay="100">
-        <div class="s-search">
-          <i class="fas fa-search"></i>
-          <input type="text" id="searchIn" placeholder="Search products..." />
-          <button id="clearBtn" style="display:none"><i class="fas fa-times"></i></button>
+      <!-- Shop Controls -->
+      <div class="shop-controls" data-aos="fade-up" data-aos-delay="100">
+        <div class="shop-search-wrap">
+          <i class="fas fa-search shop-search-icon"></i>
+          <input type="text" id="shopSearch" placeholder="Search products..." class="shop-search" />
         </div>
-        <select id="sortSel">
-          <option value="default">Sort By</option>
-          <option value="low">Price: Low to High</option>
-          <option value="high">Price: High to Low</option>
+        <select class="shop-sort" id="shopSort">
+          <option value="newest">Newest</option>
+          <option value="price-low">Price: Low–High</option>
+          <option value="price-high">Price: High–Low</option>
           <option value="rating">Top Rated</option>
-          <option value="new">Newest First</option>
         </select>
       </div>
 
-      <!-- Filters -->
-      <div class="filters" data-aos="fade-up" data-aos-delay="150">
-        <button class="f-btn active" data-f="all"><i class="fas fa-th"></i> All</button>
-        <button class="f-btn" data-f="jhumars"><i class="fas fa-sun"></i> Jhumars</button>
-        <button class="f-btn" data-f="wall-lights"><i class="fas fa-lightbulb"></i> Wall Lights</button>
-        <button class="f-btn" data-f="wall-hangings"><i class="fas fa-image"></i> Wall Hangings</button>
-        <button class="f-btn" data-f="ceiling-lights"><i class="fas fa-circle"></i> Ceiling Lights</button>
-        <button class="f-btn" data-f="table-lamps"><i class="fas fa-desktop"></i> Table Lamps</button>
-        <button class="f-btn" data-f="outdoor-lights"><i class="fas fa-tree"></i> Outdoor Lights</button>
+      <!-- Category Filters -->
+      <div class="category-filters" data-aos="fade-up" data-aos-delay="150">
+        <button class="filter-btn active" data-category="all">All</button>
+        <button class="filter-btn" data-category="jhumars">Jhumars</button>
+        <button class="filter-btn" data-category="wall-lights">Wall Lights</button>
+        <button class="filter-btn" data-category="wall-hangings">Wall Hangings</button>
+        <button class="filter-btn" data-category="ceiling-lights">Ceiling Lights</button>
+        <button class="filter-btn" data-category="table-lamps">Table Lamps</button>
+        <button class="filter-btn" data-category="outdoor-lights">Outdoor Lights</button>
       </div>
 
-      <!-- Grid -->
-      <div class="prod-grid" id="prodGrid"></div>
-      <div class="no-res" id="noRes" style="display:none">
+      <!-- Products Grid -->
+      <div class="products-grid" id="productsGrid">
+        <!-- Populated by JS -->
+      </div>
+
+      <!-- No Results -->
+      <div class="no-results" id="noResults" style="display:none;">
         <i class="fas fa-search"></i>
-        <h3>No Products Found</h3>
-        <p>Try a different search or category</p>
+        <p>No products found. Try a different search or category.</p>
       </div>
     </div>
+    <div class="section-divider"></div>
   </section>
 
-  <!-- QUICK VIEW MODAL -->
-  <div class="qv-overlay" id="qvOverlay">
-    <div class="qv-box">
-      <button class="qv-close" id="qvClose"><i class="fas fa-times"></i></button>
-      <div class="qv-body" id="qvBody"></div>
+  <!-- ============ QUICK VIEW MODAL ============ -->
+  <div class="modal-overlay" id="quickViewOverlay">
+    <div class="quick-view-modal" id="quickViewModal">
+      <button class="modal-close" id="modalClose"><i class="fas fa-times"></i></button>
+      <div class="modal-inner">
+        <div class="modal-image-wrap">
+          <img src="" alt="" id="modalImage" loading="lazy" />
+          <span class="modal-badge" id="modalBadge"></span>
+        </div>
+        <div class="modal-details">
+          <span class="modal-category" id="modalCategory"></span>
+          <h3 class="modal-name" id="modalName"></h3>
+          <div class="modal-rating" id="modalRating"></div>
+          <div class="modal-price" id="modalPrice"></div>
+          <p class="modal-desc" id="modalDesc"></p>
+          <ul class="modal-specs" id="modalSpecs"></ul>
+          <button class="btn btn-filled modal-order-btn" id="modalOrderBtn">
+            <i class="fab fa-whatsapp"></i> Order via WhatsApp
+          </button>
+        </div>
+      </div>
     </div>
   </div>
 
-  <!-- ABOUT -->
-  <section id="about" class="about">
-    <div class="wrap">
+  <!-- ============ ABOUT SECTION ============ -->
+  <section class="about-section" id="about">
+    <div class="container">
       <div class="about-grid">
-        <div class="about-imgs" data-aos="fade-right" data-aos-duration="1000">
-          <div class="ab-img-main">
-            <img src="https://images.unsplash.com/photo-1600121848594-d8644e57abab?w=800&q=90" alt="ARK Decor Showroom" loading="lazy" />
-            <div class="ab-since"><i class="fas fa-crown"></i> Est. 2018</div>
-          </div>
-          <div class="ab-img-side">
-            <img src="https://images.unsplash.com/photo-1519710164239-da123dc03ef4?w=400&q=80" alt="Luxury Lighting" loading="lazy" />
-          </div>
+        <div class="about-text" data-aos="fade-right" data-aos-duration="900">
+          <span class="section-eyebrow">✦ OUR STORY</span>
+          <h2 class="section-title about-title">Crafting Light<br /><em>Since 2012</em></h2>
+          <p class="about-body">
+            Born in the heart of Mumbai, ARK Decor began as a passionate pursuit of beauty in light. Over a decade later, we stand as Maharashtra's most trusted name in luxury handcrafted lighting — where every chandelier, every sconce, and every pendant tells a story of meticulous artistry.
+          </p>
+          <p class="about-body">
+            Our master craftsmen draw from centuries-old traditions while embracing contemporary design sensibilities. From grand hotel lobbies in South Mumbai to intimate penthouse living rooms in Bandra, ARK Decor has illuminated over two thousand distinguished spaces across India.
+          </p>
+          <p class="about-body">
+            Every piece is conceived with intention, crafted with precision, and delivered with care — because we believe that extraordinary light transforms not just a room, but the life lived within it.
+          </p>
+          <a href="#contact" class="btn btn-outlined about-cta">
+            <span>Begin Your Journey</span>
+            <i class="fas fa-arrow-right"></i>
+          </a>
         </div>
-        <div class="about-txt" data-aos="fade-left" data-aos-duration="1000">
-          <span class="sec-tag">Our Story</span>
-          <h2 class="sec-title">Crafting <em class="gold-em">Brilliance</em><br/>Since 2018</h2>
-          <p class="ab-p">ARK Decor was born from a passion for transforming ordinary spaces into extraordinary experiences. We believe lighting is not merely functional — it is the soul of a room.</p>
-          <p class="ab-p">Our master artisans hand-select every crystal, every gilded frame to ensure each piece is a testament to uncompromising luxury. From intimate bedrooms to grand halls, our lighting solutions have graced Mumbai's most prestigious homes.</p>
-          <div class="ab-checks">
-            <div class="ab-check"><i class="fas fa-check-circle"></i> 100% Handcrafted Pieces</div>
-            <div class="ab-check"><i class="fas fa-check-circle"></i> Premium Grade Materials</div>
-            <div class="ab-check"><i class="fas fa-check-circle"></i> Custom Orders Available</div>
-            <div class="ab-check"><i class="fas fa-check-circle"></i> Pan India Delivery</div>
+
+        <div class="about-images" data-aos="fade-left" data-aos-duration="900" data-aos-delay="150">
+          <div class="about-img-wrap about-img-top">
+            <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=600&q=80" alt="Luxury interior with ARK Decor lighting" loading="lazy" />
           </div>
-          <a href="#contact" class="btn-primary"><i class="fas fa-envelope"></i> Get In Touch</a>
+          <div class="about-img-wrap about-img-bottom">
+            <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=600&q=80" alt="Master craftsman at work" loading="lazy" />
+          </div>
         </div>
       </div>
 
       <!-- Stats -->
       <div class="stats-row" data-aos="fade-up" data-aos-delay="200">
-        <div class="stat-box">
-          <div class="stat-n" data-count="6">0</div><span>+</span>
-          <p>Years of Excellence</p>
+        <div class="stat-item">
+          <span class="stat-number" data-target="12">0</span>
+          <span class="stat-suffix">+</span>
+          <span class="stat-label">Years of Excellence</span>
         </div>
-        <div class="stat-box">
-          <div class="stat-n" data-count="500">0</div><span>+</span>
-          <p>Products Crafted</p>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-number" data-target="2400">0</span>
+          <span class="stat-suffix">+</span>
+          <span class="stat-label">Pieces Crafted</span>
         </div>
-        <div class="stat-box">
-          <div class="stat-n" data-count="2000">0</div><span>+</span>
-          <p>Happy Customers</p>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-number" data-target="1800">0</span>
+          <span class="stat-suffix">+</span>
+          <span class="stat-label">Happy Clients</span>
         </div>
-        <div class="stat-box">
-          <div class="stat-n" data-count="150">0</div><span>+</span>
-          <p>Custom Orders</p>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-number" data-target="300">0</span>
+          <span class="stat-suffix">+</span>
+          <span class="stat-label">Custom Orders</span>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- TESTIMONIALS -->
-  <section class="testimonials">
-    <div class="wrap">
-      <div class="sec-head" data-aos="fade-up">
-        <span class="sec-tag">Client Love</span>
-        <h2 class="sec-title">What Our <em class="gold-em">Clients</em> Say</h2>
-        <p class="sec-sub">Real stories from our valued customers across India.</p>
+  <!-- ============ TESTIMONIALS ============ -->
+  <section class="testimonials-section" id="testimonials">
+    <div class="section-divider"></div>
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-eyebrow">✦ CLIENT VOICES ✦</span>
+        <h2 class="section-title">Words From Our Clients</h2>
+        <p class="section-subtitle">Stories of spaces transformed by light</p>
       </div>
-      <div class="swiper tSwiper" data-aos="fade-up" data-aos-delay="100">
+
+      <div class="swiper testimonials-swiper" data-aos="fade-up" data-aos-delay="150">
         <div class="swiper-wrapper">
+
           <div class="swiper-slide">
-            <div class="t-card">
-              <div class="t-quote"><i class="fas fa-quote-left"></i></div>
-              <p>"The crystal chandelier we ordered for our drawing room is absolutely breathtaking. Every guest who visits is mesmerized. ARK Decor delivered beyond expectations!"</p>
-              <div class="t-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-              <div class="t-author">
-                <div class="t-av">PR</div>
-                <div><h4>Priya Rajan</h4><p>Mira Road, Mumbai</p></div>
+            <div class="testimonial-card">
+              <div class="testimonial-stars">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+              </div>
+              <p class="testimonial-text">"The Royal Mughal Jhumar ARK Decor installed in our drawing room is nothing short of breathtaking. Every guest remarks on it. The quality and craftsmanship is simply unmatched in Mumbai."</p>
+              <div class="testimonial-author">
+                <div class="author-avatar">PS</div>
+                <div class="author-info">
+                  <span class="author-name">Priya Sharma</span>
+                  <span class="author-city">Bandra, Mumbai</span>
+                </div>
               </div>
             </div>
           </div>
+
           <div class="swiper-slide">
-            <div class="t-card">
-              <div class="t-quote"><i class="fas fa-quote-left"></i></div>
-              <p>"Ordered a custom ceiling light for my restaurant. The team was professional and delivered on time. My restaurant ambiance has been completely transformed!"</p>
-              <div class="t-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-              <div class="t-author">
-                <div class="t-av">RK</div>
-                <div><h4>Rahul Khanna</h4><p>Andheri, Mumbai</p></div>
+            <div class="testimonial-card">
+              <div class="testimonial-stars">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+              </div>
+              <p class="testimonial-text">"We furnished our entire boutique hotel with ARK Decor lighting. The team's design consultation was invaluable — they understood our vision perfectly and delivered beyond expectations."</p>
+              <div class="testimonial-author">
+                <div class="author-avatar">RK</div>
+                <div class="author-info">
+                  <span class="author-name">Rahul Kapoor</span>
+                  <span class="author-city">Juhu, Mumbai</span>
+                </div>
               </div>
             </div>
           </div>
+
           <div class="swiper-slide">
-            <div class="t-card">
-              <div class="t-quote"><i class="fas fa-quote-left"></i></div>
-              <p>"We decorated our entire bungalow with ARK Decor products. The quality and elegance creates a harmonious luxury throughout. Worth every rupee!"</p>
-              <div class="t-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i></div>
-              <div class="t-author">
-                <div class="t-av">SM</div>
-                <div><h4>Sneha Mehta</h4><p>Borivali, Mumbai</p></div>
+            <div class="testimonial-card">
+              <div class="testimonial-stars">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+              </div>
+              <p class="testimonial-text">"The custom brass pendant they designed for our Pune villa is an absolute masterpiece. ARK Decor truly understands luxury. Worth every rupee — and the WhatsApp ordering was so convenient!"</p>
+              <div class="testimonial-author">
+                <div class="author-avatar">AM</div>
+                <div class="author-info">
+                  <span class="author-name">Ananya Mehta</span>
+                  <span class="author-city">Koregaon Park, Pune</span>
+                </div>
               </div>
             </div>
           </div>
+
           <div class="swiper-slide">
-            <div class="t-card">
-              <div class="t-quote"><i class="fas fa-quote-left"></i></div>
-              <p>"The wall hangings for my boutique hotel have received countless compliments. ARK Decor's pieces have a timeless quality that elevates any space."</p>
-              <div class="t-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-              <div class="t-author">
-                <div class="t-av">AJ</div>
-                <div><h4>Amit Joshi</h4><p>Thane, Mumbai</p></div>
+            <div class="testimonial-card">
+              <div class="testimonial-stars">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+              </div>
+              <p class="testimonial-text">"As an interior designer, I recommend ARK Decor to all my premium clients. Their range is extraordinary, delivery is always on time, and the after-sales support is exceptional. A true partner."</p>
+              <div class="testimonial-author">
+                <div class="author-avatar">SD</div>
+                <div class="author-info">
+                  <span class="author-name">Siddharth Desai</span>
+                  <span class="author-city">Worli, Mumbai</span>
+                </div>
               </div>
             </div>
           </div>
+
           <div class="swiper-slide">
-            <div class="t-card">
-              <div class="t-quote"><i class="fas fa-quote-left"></i></div>
-              <p>"Ordering via WhatsApp was incredibly easy. The team helped me choose the perfect table lamp. Product arrived in pristine condition. Will order again!"</p>
-              <div class="t-stars"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-              <div class="t-author">
-                <div class="t-av">NS</div>
-                <div><h4>Neha Shah</h4><p>Vasai, Mumbai</p></div>
+            <div class="testimonial-card">
+              <div class="testimonial-stars">
+                <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+              </div>
+              <p class="testimonial-text">"Ordered the Artisan Brass Tripod lamp and I'm in love. It arrived perfectly packaged, looks magnificent in my study. The gold finish is just exquisite. Will definitely be ordering more pieces."</p>
+              <div class="testimonial-author">
+                <div class="author-avatar">NK</div>
+                <div class="author-info">
+                  <span class="author-name">Neha Kulkarni</span>
+                  <span class="author-city">Powai, Mumbai</span>
+                </div>
               </div>
             </div>
+          </div>
+
+        </div>
+        <div class="swiper-button-prev testimonial-prev"><i class="fas fa-chevron-left"></i></div>
+        <div class="swiper-button-next testimonial-next"><i class="fas fa-chevron-right"></i></div>
+        <div class="swiper-pagination testimonial-pagination"></div>
+      </div>
+    </div>
+    <div class="section-divider"></div>
+  </section>
+
+  <!-- ============ GALLERY SECTION ============ -->
+  <section class="gallery-section" id="gallery">
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-eyebrow">✦ INSTALLATIONS ✦</span>
+        <h2 class="section-title">Installed &amp; Loved</h2>
+        <p class="section-subtitle">Real spaces transformed by ARK Decor</p>
+      </div>
+
+      <div class="gallery-masonry" id="galleryGrid">
+
+        <div class="gallery-item" data-aos="fade-up" data-aos-delay="0">
+          <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=80" alt="Luxury chandelier installation" loading="lazy" />
+          <div class="gallery-overlay">
+            <span class="gallery-view"><i class="fas fa-expand-alt"></i> View</span>
           </div>
         </div>
-        <div class="swiper-pagination t-pag"></div>
-        <div class="swiper-button-prev t-prev"></div>
-        <div class="swiper-button-next t-next"></div>
+
+        <div class="gallery-item" data-aos="fade-up" data-aos-delay="50">
+          <img src="https://images.unsplash.com/photo-1567016432779-094069958ea5?w=800&q=80" alt="Modern living room with pendant lights" loading="lazy" />
+          <div class="gallery-overlay">
+            <span class="gallery-view"><i class="fas fa-expand-alt"></i> View</span>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-aos="fade-up" data-aos-delay="100">
+          <img src="https://images.unsplash.com/photo-1540932239986-30128078f3c5?w=800&q=80" alt="Elegant dining room chandelier" loading="lazy" />
+          <div class="gallery-overlay">
+            <span class="gallery-view"><i class="fas fa-expand-alt"></i> View</span>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-aos="fade-up" data-aos-delay="150">
+          <img src="https://images.unsplash.com/photo-1507473885765-e6ed057f782c?w=800&q=80" alt="Hotel lobby lighting installation" loading="lazy" />
+          <div class="gallery-overlay">
+            <span class="gallery-view"><i class="fas fa-expand-alt"></i> View</span>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-aos="fade-up" data-aos-delay="200">
+          <img src="https://images.unsplash.com/photo-1449247709967-d4461a6a6103?w=800&q=80" alt="Artisan wall sconce installation" loading="lazy" />
+          <div class="gallery-overlay">
+            <span class="gallery-view"><i class="fas fa-expand-alt"></i> View</span>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-aos="fade-up" data-aos-delay="250">
+          <img src="https://images.unsplash.com/photo-1615529328331-f8917597711f?w=800&q=80" alt="Bedroom accent lighting" loading="lazy" />
+          <div class="gallery-overlay">
+            <span class="gallery-view"><i class="fas fa-expand-alt"></i> View</span>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-aos="fade-up" data-aos-delay="300">
+          <img src="https://images.unsplash.com/photo-1513506003901-1e6a35e7d47f?w=800&q=80" alt="Table lamp luxury interior" loading="lazy" />
+          <div class="gallery-overlay">
+            <span class="gallery-view"><i class="fas fa-expand-alt"></i> View</span>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-aos="fade-up" data-aos-delay="350">
+          <img src="https://images.unsplash.com/photo-1571508601891-ca5e7a713859?w=800&q=80" alt="Outdoor lantern installation" loading="lazy" />
+          <div class="gallery-overlay">
+            <span class="gallery-view"><i class="fas fa-expand-alt"></i> View</span>
+          </div>
+        </div>
+
+        <div class="gallery-item" data-aos="fade-up" data-aos-delay="400">
+          <img src="https://images.unsplash.com/photo-1582582621959-48d27397dc69?w=800&q=80" alt="Crystal ceiling light" loading="lazy" />
+          <div class="gallery-overlay">
+            <span class="gallery-view"><i class="fas fa-expand-alt"></i> View</span>
+          </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Gallery Lightbox -->
+    <div class="lightbox-overlay" id="lightboxOverlay">
+      <button class="lightbox-close" id="lightboxClose"><i class="fas fa-times"></i></button>
+      <button class="lightbox-prev" id="lightboxPrev"><i class="fas fa-chevron-left"></i></button>
+      <button class="lightbox-next" id="lightboxNext"><i class="fas fa-chevron-right"></i></button>
+      <div class="lightbox-img-wrap">
+        <img src="" alt="" id="lightboxImg" />
       </div>
     </div>
   </section>
 
-  <!-- GALLERY -->
-  <section id="gallery" class="gallery">
-    <div class="wrap">
-      <div class="sec-head" data-aos="fade-up">
-        <span class="sec-tag">Portfolio</span>
-        <h2 class="sec-title">Our <em class="gold-em">Installations</em></h2>
-        <p class="sec-sub">A glimpse into spaces we have transformed with light.</p>
+  <!-- ============ CONTACT SECTION ============ -->
+  <section class="contact-section" id="contact">
+    <div class="section-divider"></div>
+    <div class="container">
+      <div class="section-header" data-aos="fade-up">
+        <span class="section-eyebrow">✦ GET IN TOUCH ✦</span>
+        <h2 class="section-title">Let's Create Something<br /><em>Beautiful</em></h2>
       </div>
-      <div class="gal-grid">
-        <div class="gal-item gal-big" data-aos="fade-up" data-aos-delay="0">
-          <img src="https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=800&q=85" alt="Grand Jhumar" loading="lazy"/>
-          <div class="gal-ov"><i class="fas fa-expand-alt"></i><span>Grand Ballroom Jhumar</span></div>
-        </div>
-        <div class="gal-item" data-aos="fade-up" data-aos-delay="100">
-          <img src="https://images.unsplash.com/photo-1540932239986-30128078f3c5?w=600&q=85" alt="Crystal Chandelier" loading="lazy"/>
-          <div class="gal-ov"><i class="fas fa-expand-alt"></i><span>Crystal Chandelier</span></div>
-        </div>
-        <div class="gal-item" data-aos="fade-up" data-aos-delay="150">
-          <img src="https://images.unsplash.com/photo-1513506003901-1e6a229e2d15?w=600&q=85" alt="Wall Light" loading="lazy"/>
-          <div class="gal-ov"><i class="fas fa-expand-alt"></i><span>Luxury Wall Lighting</span></div>
-        </div>
-        <div class="gal-item gal-tall" data-aos="fade-up" data-aos-delay="200">
-          <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?w=600&q=85" alt="Interior" loading="lazy"/>
-          <div class="gal-ov"><i class="fas fa-expand-alt"></i><span>Villa Interior</span></div>
-        </div>
-        <div class="gal-item" data-aos="fade-up" data-aos-delay="250">
-          <img src="https://images.unsplash.com/photo-1507473885765-e6ed057f782c?w=600&q=85" alt="Table Lamp" loading="lazy"/>
-          <div class="gal-ov"><i class="fas fa-expand-alt"></i><span>Artisan Table Lamp</span></div>
-        </div>
-        <div class="gal-item" data-aos="fade-up" data-aos-delay="300">
-          <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=600&q=85" alt="Living Room" loading="lazy"/>
-          <div class="gal-ov"><i class="fas fa-expand-alt"></i><span>Modern Living Room</span></div>
-        </div>
-        <div class="gal-item gal-wide" data-aos="fade-up" data-aos-delay="350">
-          <img src="https://images.unsplash.com/photo-1565182999561-18d7dc61c393?w=900&q=85" alt="Dining" loading="lazy"/>
-          <div class="gal-ov"><i class="fas fa-expand-alt"></i><span>Dining Room Elegance</span></div>
-        </div>
-        <div class="gal-item" data-aos="fade-up" data-aos-delay="400">
-          <img src="https://images.unsplash.com/photo-1484101403633-562f891dc89a?w=600&q=85" alt="Bedroom" loading="lazy"/>
-          <div class="gal-ov"><i class="fas fa-expand-alt"></i><span>Bedroom Ambiance</span></div>
-        </div>
-      </div>
-    </div>
-  </section>
 
-  <!-- LIGHTBOX -->
-  <div class="lb-overlay" id="lbOverlay">
-    <button class="lb-close" id="lbClose"><i class="fas fa-times"></i></button>
-    <button class="lb-prev" id="lbPrev"><i class="fas fa-chevron-left"></i></button>
-    <button class="lb-next" id="lbNext"><i class="fas fa-chevron-right"></i></button>
-    <div class="lb-content">
-      <img id="lbImg" src="" alt="" />
-      <p id="lbCap"></p>
-    </div>
-  </div>
-
-  <!-- CONTACT -->
-  <section id="contact" class="contact">
-    <div class="wrap">
-      <div class="sec-head" data-aos="fade-up">
-        <span class="sec-tag">Reach Us</span>
-        <h2 class="sec-title">Get In <em class="gold-em">Touch</em></h2>
-        <p class="sec-sub">We'd love to help you find the perfect lighting for your space.</p>
-      </div>
       <div class="contact-grid">
-        <div class="con-info" data-aos="fade-right" data-aos-duration="900">
-          <div class="con-card">
-            <h3>Contact Information</h3>
-            <div class="con-item">
-              <div class="con-ico"><i class="fab fa-whatsapp"></i></div>
-              <div><span class="con-lbl">WhatsApp</span><span class="con-val" id="dispPhone">+91 XXXXX XXXXX</span></div>
+        <div class="contact-info" data-aos="fade-right" data-aos-duration="900">
+          <div class="contact-detail">
+            <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
+            <div>
+              <span class="contact-label">Address</span>
+              <span class="contact-value">Mumbai, Maharashtra, India</span>
             </div>
-            <div class="con-item">
-              <div class="con-ico"><i class="fas fa-envelope"></i></div>
-              <div><span class="con-lbl">Email</span><span class="con-val">info@arkdecor.in</span></div>
+          </div>
+          <div class="contact-detail">
+            <div class="contact-icon"><i class="fas fa-phone"></i></div>
+            <div>
+              <span class="contact-label">Phone</span>
+              <a href="tel:+918452099537" class="contact-value contact-link">+91 84520 99537</a>
             </div>
-            <div class="con-item">
-              <div class="con-ico"><i class="fas fa-map-marker-alt"></i></div>
-              <div><span class="con-lbl">Location</span><span class="con-val">Mira Road, Mumbai, Maharashtra</span></div>
+          </div>
+          <div class="contact-detail">
+            <div class="contact-icon"><i class="fas fa-envelope"></i></div>
+            <div>
+              <span class="contact-label">Email</span>
+              <a href="mailto:hello@arkdecor.in" class="contact-value contact-link">hello@arkdecor.in</a>
             </div>
-            <div class="con-item">
-              <div class="con-ico"><i class="fas fa-clock"></i></div>
-              <div><span class="con-lbl">Hours</span><span class="con-val">Mon–Sat: 10AM – 8PM</span></div>
-            </div>
-            <div class="con-socials">
-              <h4>Follow Us</h4>
-              <div class="soc-row">
-                <a href="#" class="soc-a"><i class="fab fa-instagram"></i></a>
-                <a href="#" class="soc-a"><i class="fab fa-facebook-f"></i></a>
-                <a href="#" class="soc-a"><i class="fab fa-youtube"></i></a>
-                <a href="#" class="soc-a"><i class="fab fa-pinterest-p"></i></a>
-              </div>
-            </div>
-            <a href="#" class="wa-big-btn" id="conWaBtn">
-              <i class="fab fa-whatsapp"></i>
-              <div><span>Chat on WhatsApp</span><small>Quick response guaranteed</small></div>
-            </a>
+          </div>
+
+          <a href="https://wa.me/918452099537" target="_blank" class="contact-wa-btn">
+            <div class="wa-pulse-ring"></div>
+            <i class="fab fa-whatsapp"></i>
+            <span>Chat on WhatsApp</span>
+          </a>
+
+          <div class="contact-social">
+            <a href="#" class="social-icon" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="social-icon" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+            <a href="#" class="social-icon" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
           </div>
         </div>
-        <div class="con-form" data-aos="fade-left" data-aos-duration="900">
-          <div class="con-card">
-            <h3>Send a Message</h3>
-            <p>Fill the form — we'll reply via WhatsApp instantly.</p>
-            <form id="conForm">
-              <div class="fg">
-                <label>Your Name</label>
-                <input type="text" id="cName" placeholder="e.g. Rahul Sharma" required />
-              </div>
-              <div class="fg">
-                <label>Phone Number</label>
-                <input type="tel" id="cPhone" placeholder="e.g. 9876543210" />
-              </div>
-              <div class="fg">
-                <label>Subject</label>
-                <select id="cSub">
-                  <option>General Inquiry</option>
-                  <option>Product Information</option>
-                  <option>Custom Order</option>
-                  <option>Pricing</option>
-                  <option>Delivery</option>
-                </select>
-              </div>
-              <div class="fg">
-                <label>Message</label>
-                <textarea id="cMsg" rows="4" placeholder="Tell us about your requirements..." required></textarea>
-              </div>
-              <button type="submit" class="btn-primary w-full">
-                <i class="fab fa-whatsapp"></i> Send via WhatsApp
-              </button>
-            </form>
-          </div>
+
+        <div class="contact-form-wrap" data-aos="fade-left" data-aos-duration="900" data-aos-delay="150">
+          <form class="contact-form" id="contactForm">
+            <div class="form-group">
+              <label for="contactName" class="form-label">Your Name *</label>
+              <input type="text" id="contactName" class="form-input" placeholder="e.g. Priya Sharma" required />
+            </div>
+            <div class="form-group">
+              <label for="contactPhone" class="form-label">Phone (Optional)</label>
+              <input type="tel" id="contactPhone" class="form-input" placeholder="+91 XXXXX XXXXX" />
+            </div>
+            <div class="form-group">
+              <label for="contactMessage" class="form-label">Your Message *</label>
+              <textarea id="contactMessage" class="form-input form-textarea" placeholder="Tell us about your space and requirements..." rows="5" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-filled contact-submit">
+              <i class="fab fa-whatsapp"></i>
+              <span>Send via WhatsApp</span>
+            </button>
+          </form>
         </div>
       </div>
     </div>
+    <div class="section-divider"></div>
   </section>
 
-  <!-- FOOTER -->
+  <!-- ============ FOOTER ============ -->
   <footer class="footer">
-    <div class="ft-top">
-      <div class="wrap">
-        <div class="ft-grid">
-          <div class="ft-brand">
-            <a href="#home" class="brand">
-              <div class="brand-icon"><i class="fas fa-crown"></i></div>
-              <div class="brand-text"><span class="b-ark">ARK</span><span class="b-decor">Decor</span></div>
-            </a>
-            <p>Illuminating Mumbai's most exquisite homes and spaces with handcrafted luxury lighting since 2018.</p>
-            <div class="ft-soc">
-              <a href="#"><i class="fab fa-instagram"></i></a>
-              <a href="#"><i class="fab fa-facebook-f"></i></a>
-              <a href="#"><i class="fab fa-youtube"></i></a>
-              <a href="#"><i class="fab fa-whatsapp"></i></a>
+    <div class="footer-main">
+      <div class="container">
+        <div class="footer-grid">
+
+          <div class="footer-col footer-brand">
+            <div class="footer-logo">
+              <span class="logo-ark">ARK</span>
+              <span class="logo-divider">|</span>
+              <span class="logo-decor">DECOR</span>
+            </div>
+            <p class="footer-tagline">Crafting Light. Defining Space.<br />Mumbai's Premier Lighting Atelier.</p>
+            <div class="footer-social">
+              <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+              <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+              <a href="#" aria-label="Pinterest"><i class="fab fa-pinterest-p"></i></a>
+              <a href="https://wa.me/918452099537" target="_blank" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
             </div>
           </div>
-          <div class="ft-col">
-            <h4>Quick Links</h4>
-            <ul>
+
+          <div class="footer-col">
+            <h5 class="footer-col-title">Quick Links</h5>
+            <ul class="footer-links">
               <li><a href="#home">Home</a></li>
               <li><a href="#shop">Shop</a></li>
               <li><a href="#about">About Us</a></li>
+              <li><a href="#testimonials">Testimonials</a></li>
               <li><a href="#gallery">Gallery</a></li>
               <li><a href="#contact">Contact</a></li>
             </ul>
           </div>
-          <div class="ft-col">
-            <h4>Categories</h4>
-            <ul>
-              <li><a href="#shop">Jhumars</a></li>
-              <li><a href="#shop">Wall Lights</a></li>
-              <li><a href="#shop">Wall Hangings</a></li>
-              <li><a href="#shop">Ceiling Lights</a></li>
-              <li><a href="#shop">Table Lamps</a></li>
-              <li><a href="#shop">Outdoor Lights</a></li>
+
+          <div class="footer-col">
+            <h5 class="footer-col-title">Categories</h5>
+            <ul class="footer-links">
+              <li><a href="#shop" data-filter="jhumars">Jhumars</a></li>
+              <li><a href="#shop" data-filter="wall-lights">Wall Lights</a></li>
+              <li><a href="#shop" data-filter="wall-hangings">Wall Hangings</a></li>
+              <li><a href="#shop" data-filter="ceiling-lights">Ceiling Lights</a></li>
+              <li><a href="#shop" data-filter="table-lamps">Table Lamps</a></li>
+              <li><a href="#shop" data-filter="outdoor-lights">Outdoor Lights</a></li>
             </ul>
           </div>
-          <div class="ft-col">
-            <h4>Contact</h4>
-            <ul class="ft-con-list">
-              <li><i class="fab fa-whatsapp"></i><span id="ftPhone">+91 XXXXX XXXXX</span></li>
-              <li><i class="fas fa-envelope"></i> info@arkdecor.in</li>
-              <li><i class="fas fa-map-marker-alt"></i> Mira Road, Mumbai</li>
+
+          <div class="footer-col">
+            <h5 class="footer-col-title">Contact</h5>
+            <ul class="footer-contact-list">
+              <li><i class="fas fa-map-marker-alt"></i> Mumbai, Maharashtra, India</li>
+              <li><a href="tel:+918452099537"><i class="fas fa-phone"></i> +91 84520 99537</a></li>
+              <li><a href="mailto:hello@arkdecor.in"><i class="fas fa-envelope"></i> hello@arkdecor.in</a></li>
+              <li><a href="https://wa.me/918452099537" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp Us</a></li>
             </ul>
-            <a href="#" class="ft-wa-btn" id="ftWaBtn"><i class="fab fa-whatsapp"></i> Order Now</a>
           </div>
+
         </div>
       </div>
     </div>
-    <div class="ft-bot">
-      <div class="wrap">
-        <p>&copy; <span id="yr"></span> ARK Decor. All rights reserved.</p>
-        <p>Made with <i class="fas fa-heart" style="color:#c9a84c"></i> for ARK Decor</p>
+
+    <div class="footer-bottom">
+      <div class="container">
+        <div class="footer-bottom-inner">
+          <p>&copy; 2024 ARK Decor. All rights reserved.</p>
+          <p>Crafted with <span class="footer-heart">❤️</span> in Mumbai for <strong>ARK Decor</strong></p>
+        </div>
       </div>
     </div>
   </footer>
 
-  <!-- WISHLIST SIDEBAR -->
-  <div class="ws-ov" id="wsOv"></div>
-  <div class="ws-side" id="wsSide">
-    <div class="ws-head">
-      <h3><i class="fas fa-heart"></i> My Wishlist</h3>
-      <button id="wsClose"><i class="fas fa-times"></i></button>
-    </div>
-    <div class="ws-items" id="wsItems"></div>
-    <div class="ws-empty" id="wsEmpty">
-      <i class="fas fa-heart-broken"></i>
-      <p>Your wishlist is empty</p>
-      <a href="#shop" class="btn-primary">Browse Products</a>
+  <!-- ============ WISHLIST MODAL ============ -->
+  <div class="modal-overlay" id="wishlistOverlay">
+    <div class="wishlist-modal" id="wishlistModal">
+      <button class="modal-close" id="wishlistClose"><i class="fas fa-times"></i></button>
+      <h3 class="wishlist-title"><i class="fas fa-heart"></i> My Wishlist</h3>
+      <div class="wishlist-items" id="wishlistItems"></div>
+      <div class="wishlist-empty" id="wishlistEmpty" style="display:none;">
+        <i class="fas fa-heart-broken"></i>
+        <p>Your wishlist is empty.<br />Save pieces you love!</p>
+      </div>
     </div>
   </div>
 
-  <!-- FLOATING WHATSAPP -->
-  <a href="#" class="wa-float" id="waFloat">
-    <i class="fab fa-whatsapp"></i>
-    <div class="wa-ripple"></div>
-  </a>
-
-  <!-- SCROLL TOP -->
-  <button class="scroll-top" id="scrollTop">
-    <i class="fas fa-chevron-up"></i>
+  <!-- ============ SCROLL TO TOP ============ -->
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
+    <i class="fas fa-arrow-up"></i>
   </button>
 
-  <!-- TOAST -->
-  <div class="toast-box" id="toastBox"></div>
+  <!-- ============ WHATSAPP FLOAT ============ -->
+  <a href="https://wa.me/918452099537" target="_blank" class="whatsapp-float" aria-label="Chat on WhatsApp">
+    <div class="wa-float-pulse"></div>
+    <i class="fab fa-whatsapp"></i>
+    <span class="wa-tooltip">Chat with us!</span>
+  </a>
 
+  <!-- ============ TOAST CONTAINER ============ -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- Scripts -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
   <script src="products.js"></script>
